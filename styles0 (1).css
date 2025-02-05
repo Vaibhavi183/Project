@@ -1,0 +1,131 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #f5f5f5, #d1c4e9); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    border-bottom: 5px solid #27ae60;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Header shadow */
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Playfair Display', serif; /* Elegant font for the header */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Text shadow for extra pop */
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #ecf0f1;
+    letter-spacing: 1px;
+}
+
+/* Bucket List Styling */
+.bucket-list {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    animation: fadeIn 1s ease-out; /* Fade-in animation for the list */
+}
+
+.bucket-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bucket-list li {
+    background-color: #ffffff;
+    border: 2px solid #34495e;
+    padding: 25px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for each item */
+}
+
+.bucket-list li:hover {
+    background-color: #ecf0f1;
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.bucket-list .icon {
+    font-size: 2.2rem;
+    margin-right: 20px;
+    color: #2ecc71; /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.bucket-list li:hover .icon {
+    color: #f39c12; /* Icon color change on hover */
+}
+
+.completed {
+    background-color: #7bed9f;
+    border-color: #2ecc71;
+    text-decoration: line-through;
+    color: #2c3e50;
+    font-style: italic;
+    animation: pulse 1s infinite alternate; /* Animation for completed items */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 1rem;
+    position: relative;
+    box-shadow: 0 -8px 15px rgba(0, 0, 0, 0.2); /* Footer shadow */
+}
+
+footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .bucket-list li {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
